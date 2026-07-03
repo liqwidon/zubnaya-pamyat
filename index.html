@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Зубная Память — напоминания и возврат пациентов для стоматологий</title>
+  <meta name="description" content="AI-сервис для стоматологий: напоминания о приёмах снижают неявки, автоматический возврат пациентов на профосмотры повышает выручку.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@400;500;600;800&family=Sofia+Sans+Condensed:wght@700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ШАПКА -->
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a href="#" class="logo">
+        <span class="logo-mark">ЗП</span>
+        <span class="logo-text">Зубная Память</span>
+      </a>
+      <nav class="topnav">
+        <a href="#how">Как работает</a>
+        <a href="#economy">Экономика</a>
+        <a href="#pricing">Тарифы</a>
+        <a href="#demo" class="btn btn-small">Демо-кабинет</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Меню" onclick="document.body.classList.toggle('nav-open')">☰</button>
+    </div>
+  </header>
+
+  <!-- ГЕРОЙ -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Для частных стоматологий · 1–5 кресел</p>
+        <h1>Пациенты забывают.<br><em>Сервис — нет.</em></h1>
+        <p class="hero-sub">Напоминания о приёме за 24 часа снижают неявки, а автоматические приглашения «пора на профосмотр» возвращают пациентов, о которых клиника забыла. Без интеграции с МИС — загрузите таблицу и запустите за 15 минут.</p>
+        <div class="hero-actions">
+          <a href="#demo" class="btn btn-primary">Попробовать демо-кабинет</a>
+          <a href="#economy" class="btn btn-ghost">Посчитать выгоду</a>
+        </div>
+        <p class="hero-note">Прототип. Данные не отправляются на сервер — всё работает в вашем браузере.</p>
+      </div>
+
+      <!-- Сигнатурный элемент: живой телефон с напоминанием -->
+      <div class="hero-phone" aria-hidden="true">
+        <div class="phone-frame">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <div class="chat-day">Сегодня</div>
+            <div class="chat-bubble in delay-1">
+              <span class="chat-sender">Клиника «Дента-Люкс»</span>
+              Анна, добрый день! Напоминаем: завтра в 14:30 вы записаны на профгигиену к врачу Соколовой. Всё в силе? 🦷
+            </div>
+            <div class="chat-bubble out delay-2">Да, буду!</div>
+            <div class="chat-bubble in delay-3">
+              Отлично, ждём вас! Клиника на ул. Лесной, 12. Хорошего дня!
+            </div>
+            <div class="chat-status delay-4">✓ Неявка предотвращена · визит 6 800 ₽</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ПРОБЛЕМА В ЦИФРАХ -->
+  <section class="strip">
+    <div class="container strip-grid">
+      <div class="strip-item">
+        <span class="strip-num">10–20%</span>
+        <span class="strip-label">записей заканчиваются неявкой без напоминаний*</span>
+      </div>
+      <div class="strip-item">
+        <span class="strip-num">~40%</span>
+        <span class="strip-label">базы пациентов «спит» — не были больше года*</span>
+      </div>
+      <div class="strip-item">
+        <span class="strip-num">6 мес</span>
+        <span class="strip-label">рекомендованный интервал профгигиены — повод вернуть пациента</span>
+      </div>
+    </div>
+    <p class="container strip-foot">*Ориентиры по отрасли для оценки. Точные цифры по вашей клинике покажет отчёт сервиса за первый месяц.</p>
+  </section>
+
+  <!-- КАК РАБОТАЕТ -->
+  <section class="section" id="how">
+    <div class="container">
+      <p class="eyebrow">Как это работает</p>
+      <h2>Два сценария, одна цель — заполненное расписание</h2>
+      <div class="how-grid">
+        <article class="how-card">
+          <h3>Напоминания о приёме</h3>
+          <p>Загружаете записи на неделю (Excel/CSV или вручную). За 24 часа до визита пациент получает сообщение в WhatsApp или Telegram с просьбой подтвердить. Ответил «нет» — администратор сразу видит освободившийся слот и отдаёт его из листа ожидания.</p>
+          <ul class="how-list">
+            <li>Подтверждение в один клик</li>
+            <li>Уведомление администратору при отмене</li>
+            <li>Никаких медицинских данных — только имя, телефон, дата</li>
+          </ul>
+        </article>
+        <article class="how-card">
+          <h3>Возврат пациентов</h3>
+          <p>Сервис следит за датой последнего визита. Прошло 6 месяцев — ИИ пишет пациенту персональное приглашение на профосмотр от имени клиники: вежливо, без спама, с учётом истории обращений.</p>
+          <ul class="how-list">
+            <li>ИИ подбирает формулировку под пациента</li>
+            <li>Вы утверждаете тексты до отправки</li>
+            <li>Отчёт: сколько вернулось и сколько это принесло</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- КАЛЬКУЛЯТОР ЭКОНОМИКИ -->
+  <section class="section section-alt" id="economy">
+    <div class="container">
+      <p class="eyebrow">Экономика</p>
+      <h2>Сколько клиника теряет на неявках — и сколько вернёт</h2>
+      <div class="calc">
+        <div class="calc-controls">
+          <label class="calc-field">
+            <span>Записей в месяц</span>
+            <input type="range" id="calcVisits" min="50" max="600" step="10" value="200">
+            <output id="calcVisitsOut">200</output>
+          </label>
+          <label class="calc-field">
+            <span>Средний чек визита, ₽</span>
+            <input type="range" id="calcCheck" min="2000" max="20000" step="500" value="6000">
+            <output id="calcCheckOut">6 000</output>
+          </label>
+          <label class="calc-field">
+            <span>Доля неявок сейчас, %</span>
+            <input type="range" id="calcNoshow" min="5" max="30" step="1" value="15">
+            <output id="calcNoshowOut">15%</output>
+          </label>
+        </div>
+        <div class="calc-result">
+          <div class="calc-row">
+            <span>Потери на неявках сейчас</span>
+            <strong id="calcLoss">180 000 ₽/мес</strong>
+          </div>
+          <div class="calc-row calc-row-good">
+            <span>Вернём напоминаниями (−40% неявок)</span>
+            <strong id="calcSaved">72 000 ₽/мес</strong>
+          </div>
+          <div class="calc-row calc-row-good">
+            <span>Доход от возврата «спящих» (оценка)</span>
+            <strong id="calcReturned">36 000 ₽/мес</strong>
+          </div>
+          <div class="calc-divider"></div>
+          <div class="calc-row calc-total">
+            <span>Итого дополнительно</span>
+            <strong id="calcTotal">108 000 ₽/мес</strong>
+          </div>
+          <p class="calc-note">Подписка от 7 990 ₽/мес окупается, если сервис спасает <span id="calcBreakeven">2</span> визита в месяц.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ДЕМО-КАБИНЕТ -->
+  <section class="section" id="demo">
+    <div class="container">
+      <p class="eyebrow">Демо-кабинет</p>
+      <h2>Попробуйте прямо здесь</h2>
+      <p class="section-sub">Это рабочий прототип кабинета клиники. Добавьте пациента или загрузите пример базы — сервис покажет, кому пора отправить напоминание, а кого пора возвращать. Данные хранятся только в вашем браузере.</p>
+
+      <div class="app">
+        <div class="app-toolbar">
+          <button class="btn btn-primary" id="btnAddPatient">+ Добавить пациента</button>
+          <button class="btn btn-ghost" id="btnLoadDemo">Загрузить пример базы</button>
+          <button class="btn btn-ghost" id="btnClear">Очистить</button>
+          <div class="app-stats" id="appStats"></div>
+        </div>
+
+        <!-- Форма добавления -->
+        <form class="app-form" id="patientForm" hidden>
+          <div class="form-grid">
+            <label>Имя пациента
+              <input type="text" id="fName" placeholder="Анна" required>
+            </label>
+            <label>Телефон
+              <input type="tel" id="fPhone" placeholder="+7 900 000-00-00" required>
+            </label>
+            <label>Последний визит
+              <input type="date" id="fLastVisit" required>
+            </label>
+            <label>Следующая запись (если есть)
+              <input type="date" id="fNextVisit">
+            </label>
+            <label>Услуга
+              <select id="fService">
+                <option>Профгигиена</option>
+                <option>Лечение кариеса</option>
+                <option>Консультация</option>
+                <option>Имплантация</option>
+                <option>Ортодонтия</option>
+              </select>
+            </label>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Сохранить</button>
+            <button type="button" class="btn btn-ghost" id="btnCancelForm">Отмена</button>
+          </div>
+        </form>
+
+        <!-- Две колонки задач -->
+        <div class="app-columns">
+          <div class="app-col">
+            <h3 class="app-col-title">📅 Напомнить о приёме <span class="badge" id="badgeRemind">0</span></h3>
+            <p class="app-col-sub">Запись в ближайшие 48 часов</p>
+            <div class="patient-list" id="listRemind"></div>
+          </div>
+          <div class="app-col">
+            <h3 class="app-col-title">🔄 Пора возвращать <span class="badge" id="badgeReturn">0</span></h3>
+            <p class="app-col-sub">Последний визит более 6 месяцев назад</p>
+            <div class="patient-list" id="listReturn"></div>
+          </div>
+        </div>
+
+        <!-- Все пациенты -->
+        <details class="app-all">
+          <summary>Вся база (<span id="allCount">0</span>)</summary>
+          <div class="patient-table-wrap">
+            <table class="patient-table" id="allTable">
+              <thead>
+                <tr><th>Имя</th><th>Телефон</th><th>Последний визит</th><th>Следующая запись</th><th>Услуга</th><th></th></tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Модалка предпросмотра сообщения -->
+  <div class="modal" id="msgModal" hidden>
+    <div class="modal-card">
+      <h3 id="msgTitle">Сообщение пациенту</h3>
+      <div class="msg-preview" id="msgPreview"></div>
+      <p class="msg-hint">В рабочей версии текст генерирует ИИ и отправляет в WhatsApp/Telegram после вашего подтверждения. В прототипе — предпросмотр.</p>
+      <div class="form-actions">
+        <button class="btn btn-primary" id="btnMsgSend">Отметить как отправленное</button>
+        <button class="btn btn-ghost" id="btnMsgClose">Закрыть</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ТАРИФЫ -->
+  <section class="section section-alt" id="pricing">
+    <div class="container">
+      <p class="eyebrow">Тарифы</p>
+      <h2>Дешевле одной пломбы в месяц</h2>
+      <div class="pricing-grid">
+        <div class="price-card">
+          <h3>Старт</h3>
+          <p class="price"><strong>4 990 ₽</strong>/мес</p>
+          <ul>
+            <li>До 300 напоминаний в месяц</li>
+            <li>Возврат «спящих» пациентов</li>
+            <li>Загрузка базы из Excel</li>
+            <li>Отчёт по итогам месяца</li>
+          </ul>
+          <a href="#demo" class="btn btn-ghost btn-block">Начать с демо</a>
+        </div>
+        <div class="price-card price-card-hi">
+          <div class="price-flag">Популярный</div>
+          <h3>Клиника</h3>
+          <p class="price"><strong>7 990 ₽</strong>/мес</p>
+          <ul>
+            <li>Безлимитные напоминания</li>
+            <li>ИИ-персонализация приглашений</li>
+            <li>Лист ожидания при отменах</li>
+            <li>Поддержка в Telegram</li>
+          </ul>
+          <a href="#demo" class="btn btn-primary btn-block">Начать с демо</a>
+        </div>
+        <div class="price-card">
+          <h3>Сеть</h3>
+          <p class="price"><strong>от 14 990 ₽</strong>/мес</p>
+          <ul>
+            <li>Несколько филиалов</li>
+            <li>Интеграция с МИС (IDENT и др.)</li>
+            <li>Сводная аналитика по сети</li>
+            <li>Персональный менеджер</li>
+          </ul>
+          <a href="#demo" class="btn btn-ghost btn-block">Обсудить</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ПОДВАЛ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p><strong>Зубная Память</strong> — прототип сервиса напоминаний и возврата пациентов для стоматологий.</p>
+      <p class="footer-small">Демо-версия. Не собирает и не передаёт персональные данные: всё хранится локально в браузере (localStorage вашего устройства).</p>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
